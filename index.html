@@ -118,6 +118,24 @@
     border: 0;
   }
 
+  /* Instagram portrait → paysage */
+  .video-slot.rotated {
+    aspect-ratio: 9/16;
+    max-width: 420px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .video-slot.rotated iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 177.78%;
+    height: 56.25%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    transform-origin: center center;
+  }
+
   /* CAPTION */
   .video-caption {
     font-size: 0.8rem;
@@ -234,7 +252,7 @@
     </div>
 
     <div class="video-item">
-      <div class="video-slot">
+      <div class="video-slot rotated">
         <iframe
           src="https://www.instagram.com/reel/DYaMw36u9Tk/embed"
           allow="autoplay; encrypted-media"
